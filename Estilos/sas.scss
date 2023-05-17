@@ -1,0 +1,338 @@
+$color-fondo: #201f1f;
+$color-header: #333;
+$color-nav: #555;
+$color-boton: #00bfff;
+$color-boton-hover: #00a3cc;
+$color-texto: #fff;
+$color-texto-boton: #fff;
+$color-texto-boton-hover: #fff;
+$color-informacion: #f2f2f2;
+$color-redes-sociales: #fff;
+$color-redes-sociales-hover: #00bfff;
+$color-creditos: #222;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-fondo;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 1200px;
+  }
+}
+
+header {
+  background-color: $color-header;
+  color: $color-texto;
+  padding: 20px;
+  text-align: center;
+
+  img {
+    width: 100px;
+    height: 75px;
+    float: left;
+    padding: 9px;
+  }
+}
+
+nav {
+  background-color: $color-nav;
+  color: $color-texto;
+  padding: 10px;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      margin: 10px;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        color: $color-texto;
+        font-weight: bold;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+a.sacar-turno {
+  display: block;
+  background-color: $color-boton;
+  color: $color-texto-boton;
+  padding: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+  max-width: 90%;
+
+  &:hover {
+    background-color: $color-boton-hover;
+    color: $color-texto-boton-hover;
+  }
+}
+
+section.informacion {
+  background-color: $color-informacion;
+  padding: 50px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $color-boton;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+a h1 {
+  text-align: center;
+  padding: 25px;
+}
+
+h2 {
+  color: aliceblue;
+  padding: 25px;
+}
+
+/* Estilos de la Pagina de turnos */
+
+input {
+  background-color: rgb(38, 20, 197);
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  margin-top: 45px;
+}
+
+button {
+  padding: 7px;
+  font-style: italic;
+  background-color: rgb(12, 56, 202);
+  color: $color-texto-boton;
+  display: grid;
+  margin: 6em auto;
+}
+
+/* FIN DE PAGINA DE TURNOS */
+.carousel {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    max-width: 90%;
+    margin: 0 10px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.carousel-item.active{
+  max-width: 100%;
+    opacity: 1;
+}    
+
+
+.carousel-item:hover {
+    transform: scale(1.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    transition background-color 0.5s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('./imagenes/arrow-left.png');
+}
+
+.carousel-control-next-icon {
+    background-image: url('./imagenes/arrow-right.png');
+}
+
+
+
+footer.pie-pagina {
+  background-color: $color-header;
+  color: $color-texto;
+  padding: 50px 0;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $color-texto;
+    &:hover {
+      color: $color-boton;
+    }
+  }
+
+  .redes-sociales {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $color-redes-sociales;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $color-redes-sociales-hover;
+        }
+      }
+    }
+  }
+
+  .creditos {
+    background-color: $color-creditos;
+    padding: 10px 0;
+    text-align: center;
+
+    p {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 50px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      flex-wrap: nowrap;
+
+      li {
+        margin: 0 20px;
+      }
+    }
+
+    a {
+      padding: 20px;
+    }
+  }
+
+  section.informacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      flex-basis: 30%;
+    }
+  }
+
+  main img {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+}
