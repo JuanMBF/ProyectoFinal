@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./Estilos/sas.scss">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="" referrerpolicy="no-referrer" />
 	<link rel="shortcut icon" href="./imagenes/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header>
@@ -27,39 +30,60 @@
 	</header>
 	<main>
         <a href="./Paginas/turno.html" class="sacar-turno">SACAR TURNO AHORA</a>
-        <section class="carrusel">
-            <div class="container">
-                <h2>Últimas novedades</h2>
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./imagenes/imagen1.webp" alt="novedad 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./imagenes/consul.jpg" alt="novedad 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./imagenes/imagen1.webp" alt="novedad 3">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-	<section class="informacion">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elitMinus, atque maiores. Aut, quo, suscipit at exercitationem inventore omnis in dicta placeat cumque illo labore maiores consequuntur facere doloribus fugit quis. <a href="./Paginas/masinfo.html">Click aquí para más información...</a></p>
-        </section>
-		
+		<div class="container">
+			<br>
+			<div id="theCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#theCarousel" data-slide-to="1"></li>
+				<li data-target="#theCarousel" data-slide-to="2"></li>
+				<li data-target="#theCarousel" data-slide-to="3"></li>
+				
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+				<img src="./imagenes/saludmental.avif" alt="Ilustracion" > 
+				<div class="carousel-caption d-none d-md-block">
+			<h3></h3>
+			<p>Salud mental</p>
+			</div>
+				</div>
+				<div class="item">
+				<img src="./imagenes/pluma.avif" alt="fotografia" width="600" height="424"> 
+				<div class="carousel-caption d-none d-md-block">
+			<h3> Receta del medicamento</h3>
+			<p>Todo en el momento</p>
+			</div>
+				</div>
+			<div class="item">
+				<img src="./imagenes/consul.avif" alt="pintura" width="600" height="424">
+				<div class="carousel-caption d-none d-md-block">
+			<h3>Consultorio psiquiátrico</h3>
+			<p>Sala de estar</p>
+			</div>
+				</div>
+				<div class="item">
+				<img src="./imagenes/Congreso.webp" alt="diseno" width="600" height="424"> 
+				<div class="carousel-caption d-none d-md-block">
+			<h3>Foto de uno de los congresos que asisti </h3>
+			<p>Para mas informacion ir a Mas info</p>
+			</div>
+				</div>
+			<a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">anterior</span>
+			</a>
+			<a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">siguiente</span>
+			</a>
+			</div>
+			<section class="informacion">
+				<h1>¡Bienvenido al consultorio psiquiátrico de Güemes!</h1>
+				<p>En nuestro consultorio, nos dedicamos a brindar servicios de atención y cuidado integral de la salud mental. Nuestro equipo de profesionales altamente capacitados está comprometido con el bienestar emocional y psicológico de nuestros pacientes.Creemos en la importancia de proporcionar un entorno seguro, confidencial y comprensivo para que puedas expresarte libremente y recibir el apoyo necesario. Nuestro objetivo es ayudarte a superar los desafíos emocionales, mejorar tu calidad de vida y fomentar tu bienestar mental. Ofrecemos una amplia gama de servicios que incluyen evaluación y diagnóstico, psicoterapia individual, manejo de crisis y tratamiento de trastornos psiquiátricos. Nos basamos en enfoques terapéuticos actualizados y personalizados para adaptarnos a tus necesidades específicas.En nuestro consultorio, nos esforzamos por crear un ambiente cálido y acogedor donde te sientas cómodo y respetado. Valoramos la confidencialidad y la privacidad de nuestros pacientes, y trabajamos en estrecha colaboración contigo para desarrollar un plan de tratamiento efectivo y alcanzar tus metas terapéuticas.Si estás buscando apoyo emocional, asesoramiento o tratamiento psiquiátrico, estás en el lugar correcto. Nuestro equipo está aquí para brindarte el apoyo necesario en tu viaje hacia el bienestar mental y emocional.No dudes en contactarnos para programar una cita o para obtener más información sobre nuestros servicios. Estamos ansiosos por ayudarte y ser parte de tu camino hacia una vida más saludable y equilibrada. ¿Queres saber mas sobre mi?<a href="./Paginas/sobre-mi.html">Click aquí para más información...</a></p>
+			</section>
+			<section class="boton"><h1></h1></section>
     </main>
-
 	<footer class="pie-pagina">
 		<div class="container">
 			<div class="row">
@@ -70,16 +94,15 @@
 				</div>
 				<div class="col-md-4">
 					<h3>Contacto</h3>
-					<p><i class="fa-solid fa-map-marker"></i> Dirección: Calle Falsa 123, Ciudad Autónoma de Buenos Aires</p>
-					<p><i class="fa-solid fa-phone"></i> Teléfono: +54 11 1234-5678</p>
-					<p><i class="fa-solid fa-envelope"></i> Email: consultorio@example.com</p>
+					<p><i class="fa-solid fa-map-marker"></i> Dirección: Güemes 4552, Ciudad Autónoma de Buenos Aires</p>
+					<p><i class="fa-solid fa-phone"></i> Teléfono: +54 11 5040-5348</p>
+					<p><i class="fa-solid fa-envelope"></i> Email: consultorioguemes4552@gmail.com</p>
 				</div>
 				<div class="col-md-4">
 					<h3>Redes sociales</h3>
 					<ul class="redes-sociales">
-						<li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-						<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/victor-hugo-barros-0b9142228/"><i class="fa-brands fa-linkedin"></i></a></li>
+						<li><a target="_blank" href="https://api.whatsapp.com/send?phone=1150405348"><i class="fa-brands fa-whatsapp"></i></a></li>
 					</ul>
 				</div>
 			</div>

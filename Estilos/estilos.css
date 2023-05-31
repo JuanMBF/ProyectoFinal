@@ -1,4 +1,4 @@
-  * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -12,7 +12,8 @@ body {
 }
 
 .menu {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -26,13 +27,12 @@ header {
     align-items: center;
     font-size: 19px;
     text-align: center;
-}
 
+}
 
 header img {
     width: 100px;
     height: 75px;
-    float: left;
     padding: 9px;
 }
 
@@ -67,56 +67,51 @@ nav ul li a {
     display: block;
 }
 
+a.sacar-turno {
+    display: block;
+    background-color: #00bfff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
 
+a.sacar-turno:hover {
+    background-color: #00a3cc;
+}
 
+section.informacion {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
 
+section.informacion h1 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
 
-        a.sacar-turno {
-            display: block;
-            background-color: #00bfff;
-            color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 2rem;
-            margin: 0 auto;
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            transition: all 0.3s ease;
-        }
+section.informacion p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
 
-        a.sacar-turno:hover {
-            background-color: #00a3cc;
-        }
+section.informacion a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        section.informacion {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-        }
+section.informacion a:hover {
+    text-decoration: underline;
+}
 
-        section.informacion h1 {
-            font-size: 2rem;
-            margin-bottom: 0px;
-        }
-
-        section.informacion p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        section.informacion a {
-            color: #00bfff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section.informacion a:hover {
-            text-decoration: underline;
-        }
-
-
-a h1 {
+h1 {
     text-align: center;
     padding: 25px;
 }
@@ -126,13 +121,20 @@ h2 {
     padding: 25px;
 }
 
+body main {
+    background-color: #555;
+}
 
-/*  Estilos de la Pagina de turnos  */
+.carousel-inner .item img,
+.carousel-inner .item a img {
+    width: 100%;
+    margin: auto;
+}
 
 input {
     background-color: rgb(38, 20, 197);
     padding: 12px;
-    width: 75%;
+    width: 100%;
     height: 100%;
     margin-top: 45px;
 }
@@ -145,93 +147,6 @@ button {
     display: grid;
     margin: 6em auto;
 }
-
-/* FIN DE PAGINA DE TURNOS */
-
-.carousel {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-}
-
-.carousel-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item {
-    max-width: 90%;
-    margin: 0 10px;
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item.active {
-    max-width: 100%;
-    opacity: 1;
-  }
-  
-  .carousel-item:hover {
-    transform: scale(1.1);
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-    transition: background-color 0.5s ease-in-out;
-  }
-  
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .carousel-control-prev {
-    left: 20px;
-  }
-  
-  .carousel-control-next {
-    right:20px;
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-  
-  .carousel-control-prev-icon {
-    background-image: url('./imagenes/arrow-left.png');
-  }
-  
-  .carousel-control-next-icon {
-    background-image: url('./imagenes/arrow-right.png');
-  }
-
-
-
 
 footer.pie-pagina {
     background-color: #333;
@@ -292,8 +207,6 @@ footer.pie-pagina .creditos p {
     margin: 0;
 }
 
-
-
 @media only screen and (min-width: 768px) {
     header {
         padding: 50px;
@@ -315,18 +228,29 @@ footer.pie-pagina .creditos p {
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .mapa {
+    padding-bottom: 75%; 
+    min-width: 250px;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .tres-imagenes img{
+        min-width: 70px;
+    }
+}
+
+
 main img {
-    width: 550px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     padding: 15px;
 }
 
 main .informacion {
-    color:#000;
+    color: #000;
 }
 
-
-/* sección "Sobre mí" */
 #sobre-mi {
     padding: 50px;
 }
@@ -334,14 +258,21 @@ main .informacion {
 .imagen-texto {
     display: flex;
     align-items: center;
+
     margin-bottom: 50px;
     min-height: 100px;
     color: #fff;
 }
 
 .imagen-texto img {
-    max-width: 100%;
+    max-width: 30%;
     margin-right: 50px;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.imagen-texto:hover img {
+    filter: grayscale(0%);
 }
 
 .tres-imagenes {
@@ -351,7 +282,7 @@ main .informacion {
 }
 
 .tres-imagenes img {
-    max-width: 80%;
+    max-width: 70%;
     border-radius: 50%;
     line-height: 50px;
     font-size: 24px;
@@ -365,11 +296,6 @@ main .informacion {
 .texto-imagenes p {
     margin-bottom: 20px;
 }
-
-  /* Fin de la seccion sobre mi */
-
-
-/*  sección "masinfo" */
 
 #masinfo {
     padding: 50px;
@@ -394,87 +320,41 @@ main .informacion {
 
 .texto-img p {
     margin: 0;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #;
-    color: #fff;
-    padding: 20px;
-}
-
-h1 {
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 50px;
     color: #fff;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 50px;
+.texto-img ul{
     color: #fff;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-  /* FIN  la sección "masinfo" */
-
-/* Estilos para la sección "Ubicación" */
 .texto-mapa {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    color: #fff;
 }
 
 .texto {
     max-width: 600px;
 }
+
 .texto h2 {
     margin-top: 0;
 }
 
 .mapa {
-    max-width: 600px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.mapa iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
